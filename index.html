@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3983955a0a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav>
+                <img src="images/A_letter_tech_logo__1_-removebg-preview.png" class="logo">1
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h4>Hi there! </h4>
+                <h1>I'm <span> Akshit</span></h1>
+                <p class="typed">Designer and a Web Developer</p>
+                
+            </div>
+        </div>
+    </div>
+    <!-- -------------about------------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about2.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About me</h1>
+                    <p>I'm a novice web developer and graphic designer. Starting my journey with python and illustrator, I'm learning new things each and every day. Web development isn't as easy as it looks like but I will make sure I'm doing each project as precisely as i can</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Beginner web developer for basic websites</li>
+                                <li><span>Graphic Designer</span><br>Intermediate illustrator and photoshop user</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Web development</span><br>No prior experience</li>
+                                <li><span>Graphic Designing</span><br>Designed brand label and logo for clean club pvt. ltd.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Till 2019</span><br>SJS Faridabad</li>
+                                <li><span>2020-2022</span><br>VMPS Faridabad</li>
+                                <li><span>2022-2026</span><br>BTech ECE from JCBUST YMCA Faridabad</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------------------projects---------------------------------- -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="subtitle">My projects</h1>
+            <div class="project-list">
+                <div class="project">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Project 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vulputate lorem eu mi ultrices, quis semper tortor consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget pretium orci, quis tristique turpis.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="project">
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Project 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vulputate lorem eu mi ultrices, quis semper tortor consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget pretium orci, quis tristique turpis.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="project">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                    <h2>Project 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vulputate lorem eu mi ultrices, quis semper tortor consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget pretium orci, quis tristique turpis.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+ <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+ </script>   
+</body>
+</html>
